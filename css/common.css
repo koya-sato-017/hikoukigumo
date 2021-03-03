@@ -1,0 +1,824 @@
+body {
+    width: 100%;
+    background-color: #FFF4F4;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* PCサイズ */
+@media screen and (min-width: 1200px) {
+    header {
+        background-color: #FFF4F4;
+        position: fixed;
+        width: 320px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow-y: scroll;
+        border-right: 1px solid #e5dbdb;
+    }
+    header::-webkit-scrollbar {
+        display:none;
+    }
+    .site-introduction {
+        margin: 0 auto;
+        text-align: center;        
+    }
+    .site-introduction img {
+        width: 120px;
+        margin-top: 84px;
+    }
+    .site-introduction a:hover {
+        opacity: 0.8;
+    }
+    .site-introduction a p {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: 800;
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .site-introduction h1 {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: 800;
+        font-size: 2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 auto;
+    }
+    .site-introduction p {
+        font-size: 0.8em;
+        margin-top: 0;
+        padding: 0 32px;
+    }
+    .my-parts-hidden {
+        display: none;
+    }
+    .gnavi {
+    }
+    .gnavi.fixed {
+    }
+    .gnavi ul {
+        left: 0;
+        width: 320px;
+        display: inline-block;
+        flex-direction: column;
+    }
+    .gnavi li {
+        text-align: center;
+        border-top: 1px solid #e5dbdb;
+        padding: 12px 0;
+    }
+    .gnavi li:nth-child(8) {
+        border-bottom: 1px solid #e5dbdb;
+    }
+    .gnavi li a span {
+        color: #265e10;
+    }
+    .menu .current {
+        background-color: #C0C0C0;
+    }
+    #page-main {
+        background-color: #FFF4F4;
+        margin-left: 320px;
+    }
+
+    .breadcrumb {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .breadcrumb li {
+        display: inline;
+        list-style: none;
+        /* font-weight: bold; */
+    }
+    .breadcrumb li:after {
+        content: '>';
+        padding: 0 0.2em;
+        color: #555;
+        font-size: 0.8em;
+    }
+    .breadcrumb li:last-child:after {
+        content: '';
+    }
+    .breadcrumb li a {
+        text-decoration: none;
+        color: #555;
+        font-size: 0.8em;
+    }
+    .breadcrumb li:first-child a:before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f015';
+        font-weight: 900;
+        font-size: 1.1em;
+        color: #2e7fea;
+    }
+    .breadcrumb li a:hover {
+        text-decoration: underline;
+        color: #555;
+    }
+
+    footer {
+        border-top: 1px solid #F6E9E9;
+        margin-top: 48px;
+    }
+    .footer-main {
+        display: flex;
+        justify-content: space-around;
+    }
+    .info-nav {
+        width: 30%;
+    }
+    .info-nav .info-title {
+        align-items: center;
+        display: flex;
+    }
+    .info-nav .info-title:before, .info-title:after {
+        content: '';
+        border-top: 1px solid ;
+        flex-grow: 1;
+    }
+    .info-nav .info-title:before {
+        margin-right: 1rem;
+    }
+    .info-nav .info-title:after {
+        margin-left: 1rem;
+    }
+    .instagram .content {
+        border: 1px solid #AAAAAA;
+        background-color: #FFFFFF;
+    }
+    .instagram .instagram-title {
+        font-size: 1.2em;
+        margin: 0.4em;
+    }
+    .instagram .instagram-introduction {
+        font-size: 0.8em;
+        margin: 0.8em;
+    }
+    .instagram a {
+        display: block;
+        width: 84px;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #3797EF;
+        color: #FFFFFF;
+        background-color: #3797EF;
+        border-radius: 4px;
+    }
+    .flowbtn{
+        font-family:'Arial',sans-serif;/* 好きなフォントを指定してね */
+        border-radius:4px;
+        position:relative;
+        display:inline-block;
+        width:64px;
+        height:48px;
+        font-size:28px;
+        color:#fff!important;
+        transition:.5s;
+        text-decoration:none;
+        box-shadow:0 1px 2px #999;
+        padding-top: 8px;
+        }
+    .flowbtn i{
+        position:relative;
+        bottom:4px;
+        }
+    /* Instagram紫グラデ背景 */
+    .insta_btn1{
+        background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        overflow:hidden;
+        }
+        /* Instagramオレンジグラデ背景 */
+    .insta_btn1:before{
+        content: '';
+        position:absolute;
+        top:32px;
+        left:-20px;
+        width:80px;
+        height:48px;
+        background:-webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+        background:radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+        }
+        /* ボタン内テキスト調整 */
+    .flowbtn div{
+        font-size:12px;	
+        font-weight:bold;
+        letter-spacing:0;
+        position:relative;
+        bottom:8px;
+        }
+        /* ボタンマウスホバー時 */
+    .flowbtn:hover{
+        -webkit-transform:translateY(-5px);
+        -ms-transform:translateY(-5px);
+        transform:translateY(-5px);
+        text-decoration:none;
+        }
+        /* ulタグの内側余白を０にする */
+    ul.snsbtniti{
+        padding:0!important;
+        }
+        /* ボタン全体の位置調整 */
+    .snsbtniti{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-around;
+        }
+    .info-nav .photo-gallery .content {
+        background-image: url("../images/img2.jpg");
+        background-size: cover;
+        height: 200px;
+    }
+    .info-nav .twitter .content {
+        background-color: #FFF;
+        background-image: url("../images/website_sns.png");
+        background-size: contain;
+        height: 320px;
+    }
+    .footer-nav .menu li {
+        border-bottom: 1px solid #C0C0C0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 0.8em;
+        color: #333333;
+    }
+    .footer-nav .menu li a:before {
+        content: "\f07b";
+        color: rgba(0,0,0,.2);
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 7px;
+        margin-left: 0;
+    }
+    .photo-gallery .content p {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: 800;
+    }
+    #copyright {
+        text-align: center;
+        margin-top: 40px;
+    }
+    #page_top {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 16px;
+        bottom: -50px;
+        background: #003a75;
+        opacity: 0.6;
+        border-radius: 50%;
+    }
+    #page_top a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+    }
+    #page_top a::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f102";
+        font-weight: 900;
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .fix-nav {
+        display: none;
+    }
+}
+/* タブレットサイズ */
+@media screen and (max-width: 1199px) {
+    .site-introduction {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .site-introduction img {
+        width: 64px;
+        margin-top: 16px;
+    }
+    .site-introduction a p {
+        font-size: .4em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .site-introduction h1 {
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 auto;
+    }
+    .site-introduction p {
+        font-size: 0.8em;
+        margin-top: 0;
+    }
+    .my-parts-hidden {
+        display: none;
+    }
+    .gnavi {
+        width: 100%;
+    }
+    .gnavi.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 900;
+    }
+    .gnavi {
+        height: 80px;
+        background-color: #eaf3ff;
+        box-shadow: 0 3px 6px -3px #000000 inset;
+        font-size: 1em;
+        opacity: 0.8;
+    }
+    .gnavi__inner {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .gnavi .menu {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 98%;
+        padding: 12px;
+        border: 1px solid #C0C0C0;
+        height: 3em;
+        margin: 0 auto;
+        background: #DDDDDD;
+    }
+    .gnavi .menu li {
+        /* flex: 1; */
+        box-sizing: border-box;
+        position: relative;
+        margin: 0;
+        padding: 0 8px;
+        display: box;
+        display: -webkit-box;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-box-align: center;
+        border-right: 1px solid #ccc;
+    }
+    .gnavi .menu li:last-child {
+        border-right: none;
+    }
+    .menu .current_page_item {
+        background-color: #C0C0C0;
+    }
+    .menu .current-menu-item {
+        background-color: #C0C0C0;
+    }
+    .gnavi .menu li a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .gnavi a:hover span {
+        color: #ff7600;
+        position: relative;
+    }
+    .gnavi a:hover span::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        background-color: #ff7600;
+        border-radius: 5px;
+    }
+
+    .breadcrumb {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .breadcrumb li {
+        display: inline;
+        list-style: none;
+    }
+    .breadcrumb li:after {
+        content: '>';
+        padding: 0 0.2em;
+        color: #555;
+        font-size: 0.8em;
+    }
+    .breadcrumb li:last-child:after {
+        content: '';
+    }
+    .breadcrumb li a {
+        text-decoration: none;
+        color: #555;
+        font-size: 0.8em;
+    }
+    .breadcrumb li:first-child a:before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f015';
+        font-weight: 900;
+        font-size: 1.1em;
+        color: #2e7fea;
+    }
+    .breadcrumb li a:hover {
+        text-decoration: underline;
+        color: #555;
+    }
+    .news-link {
+        display: block;
+        color: #343434;
+    }
+    .news-link:hover {
+        text-decoration: underline;
+    }
+    .news-link .news-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid #d0d0d0;
+        font-size: .9rem;
+    }
+    .news-link .news-body .release {
+        width: 15%;
+
+    }
+    .news-link .news-body .title {
+        width: 85%;
+        
+    }
+
+    footer {
+        border-top: 1px solid #F6E9E9;
+        margin-top: 48px; 
+    }
+    .footer-main {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .info-nav {
+        width: 30%;
+    }
+    .info-nav .info-title {
+        align-items: center;
+        display: flex;
+    }
+    .info-nav .info-title:before, .info-title:after {
+        content: '';
+        border-top: 1px solid ;
+        flex-grow: 1;
+    }
+    .info-nav .info-title:before {
+        margin-right: 1rem;
+    }
+    .info-nav .info-title:after {
+        margin-left: 1rem;
+    }
+    .instagram .content {
+        border: 1px solid #AAAAAA;
+        background-color: #FFFFFF;
+    }
+    .instagram .instagram-title {
+        font-size: 1.2em;
+        margin: 0.4em;
+    }
+    .instagram .instagram-introduction {
+        font-size: 0.8em;
+        margin: 0.8em;
+    }
+    .instagram a {
+        display: block;
+        width: 84px;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #3797EF;
+        color: #FFFFFF;
+        background-color: #3797EF;
+        border-radius: 4px;
+    }
+    .flowbtn{
+        font-family:'Arial',sans-serif;/* 好きなフォントを指定してね */
+        border-radius:4px;
+        position:relative;
+        display:inline-block;
+        width:64px;
+        height:48px;
+        font-size:28px;
+        color:#fff!important;
+        transition:.5s;
+        text-decoration:none;
+        box-shadow:0 1px 2px #999;
+        padding-top: 8px;
+        }
+    .flowbtn i{
+        position:relative;
+        bottom:4px;
+        }
+    /* Instagram紫グラデ背景 */
+    .insta_btn1{
+        background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        overflow:hidden;
+        }
+        /* Instagramオレンジグラデ背景 */
+    .insta_btn1:before{
+        content: '';
+        position:absolute;
+        top:32px;
+        left:-20px;
+        width:80px;
+        height:48px;
+        background:-webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+        background:radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+        }
+        /* ボタン内テキスト調整 */
+    .flowbtn div{
+        font-size:12px;	
+        font-weight:bold;
+        letter-spacing:0;
+        position:relative;
+        bottom:8px;
+        }
+        /* ボタンマウスホバー時 */
+    .flowbtn:hover{
+        -webkit-transform:translateY(-5px);
+        -ms-transform:translateY(-5px);
+        transform:translateY(-5px);
+        text-decoration:none;
+        }
+        /* ulタグの内側余白を０にする */
+    ul.snsbtniti{
+        padding:0!important;
+        }
+        /* ボタン全体の位置調整 */
+    .snsbtniti{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-around;
+        }
+    .info-nav .photo-gallery .content {
+        background-image: url("../images/img2.jpg");
+        background-size: cover;
+        height: 200px;
+    }
+    .info-nav .twitter .content {
+        background-color: #FFF;
+        background-image: url("../images/website_sns.png");
+        background-size: contain;
+        height: 320px;
+    }
+    .footer-nav .menu li {
+        border-bottom: 1px solid #C0C0C0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 0.8em;
+        color: #333333;
+    }
+    .footer-nav .menu li a:before {
+        content: "\f07b";
+        color: rgba(0,0,0,.2);
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 7px;
+        margin-left: 0;
+    }
+    .photo-gallery .content p {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: 800;
+    }
+    #copyright {
+        text-align: center;
+        margin-top: 40px;
+    }
+    #page_top {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 16px;
+        bottom: -50px;
+        background: #003a75;
+        opacity: 0.6;
+        border-radius: 50%;
+    }
+    #page_top a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+    }
+    #page_top a::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f102";
+        font-weight: 900;
+        font-size: 25px;
+        color: #fff;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .fix-nav {
+        display: none;
+    }
+}
+/* スマホサイズ */
+@media screen and (max-width: 767px) {
+    .site-introduction {
+        margin: 0 auto 12px auto;
+        text-align: center;
+    }
+    .site-introduction img {
+        width: 64px;
+        margin-top: 16px;
+    }
+    .site-introduction a p {
+        font-size: .4em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .site-introduction h1 {
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 auto;
+    }
+    .site-introduction .site-introduction_description {
+        display: none;
+    }
+
+    /* ハンバーガーアイコンとバツアイコン */
+    .my-parts-hidden {
+        display: none;
+    }
+    #my-parts-icon.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 900;
+    }
+    #my-parts-icon {
+        cursor: pointer;
+        display: inline-block;
+        height: 50px;
+        position: relative;
+        width: 50px;
+        background-color: #FFF4F4;
+    }
+    #my-parts-icon span {
+        background:  #333;
+        border-radius: 4px;
+        display: block;
+        height: 16%;
+        left: 50%;
+        margin: -8% 0 0 -42%;
+        position: absolute;
+        top: 50%;
+        transition: all 0.3s ease-in-out;
+        width: 84%;
+        font-size: .4em;
+        
+    }
+    #my-parts-icon span::before,
+    #my-parts-icon span::after {
+        -webkit-transform: rotate(0);
+        background: #333;
+        border-radius: 4px;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 50%;
+        margin: -8% 0 0 -50%;
+        position: absolute;
+        top: 50%;
+        transform: rotate(0);
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+    }
+    #my-parts-icon span::before {
+        margin-top: -38%;
+    }
+    #my-parts-icon span::after {
+        margin-top: 19%;
+    }
+    #my-parts-checkbox:checked ~ #my-parts-icon span {
+        background: rgba(51, 51, 51, 0);
+    }
+    #my-parts-checkbox:checked ~ #my-parts-icon span::before,
+    #my-parts-checkbox:checked ~ #my-parts-icon span::after {
+        content: "";
+        display: block;
+        height: 100%;
+        left: 50%;
+        margin: -8% 0 0 -42%;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+    #my-parts-checkbox:checked ~ #my-parts-icon span::before {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    #my-parts-checkbox:checked ~ #my-parts-icon span::after {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .menu {
+        font-size: .8em;
+        margin-top: 0;
+        padding: 0 0 0 5px;
+        position: absolute;
+        top: 25%
+    }
+    .gnavi {
+        height: auto;
+        padding: 0;
+        font-size: 0.9em;
+        opacity: 1;
+        position: relative;
+    }
+    .gnavi.fixed {
+        position: fixed;
+        top: 50px;
+        z-index: 900;
+    }
+    .gnavi__inner {
+        width: 100%;
+        height: 100%;
+    }
+    .gnavi .menu {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: none;
+        padding: 0 12px;
+        z-index: 999;
+        background-color: #FFF4F4;
+    }
+    .menu .current {
+        background-color: #FFF4F4;
+    }
+    .gnavi .menu li {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #ccc;
+    }
+    .gnavi .menu li:last-child {
+        border-bottom: none;
+    }
+    .gnavi .menu li a {
+        text-align: left;
+        width: 100%;
+        border-right: none;
+    }
+    .footer-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .info-nav {
+        width: 90%;
+    }
+    .info-nav .instagram {
+        text-align: center;
+    }
+    #copyright {
+        margin-bottom: 120px;
+    }
+    #page_top {
+        z-index: 1100;
+    }
+    #menu-footernav  {
+        position: unset;
+        bottom: 0;   
+    }
+    .fix-nav {
+        position: fixed;
+        display: block;
+        z-index: 1000;
+        bottom: -24px;
+        width: 100%;
+    }
+    .fix-nav img {
+        width: 100vw;
+    }
+
+}

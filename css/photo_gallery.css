@@ -1,0 +1,39 @@
+img {
+    width: 100%;
+    /* vertical-align: bottom; */
+}
+.page-title {
+    background: url("../images/C854_akacyan_TP_V.jpg");
+    background-size: cover;
+    height: 120px;
+    padding: 24px 0 0 24px;
+}
+.page-title h2 {
+    color: #FFF;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 800;
+}
+.container {
+    margin: 0 auto;
+    padding: 5px;
+    width: 90%;
+    background-color: #fff;
+    column-count: 3;
+    column-gap: 0;
+}
+.grid {
+    padding: 5px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+@media (max-width: 800px) {
+    .container {
+        column-count: 2;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        column-count: 1;
+    }
+}
