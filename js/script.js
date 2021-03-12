@@ -3,7 +3,7 @@ jQuery(function($){
 // タブレット幅のグローバルナビの固定
 if (window.matchMedia( "(max-width: 1199px) and (min-width: 768px)" ).matches) {
     var _window = $(window),
-    _header = $(".gnavi"),
+    _header = $(".global-nav"),
     mainPhotoBottom;
 
     _window.on("scroll", function () {
@@ -37,7 +37,7 @@ if (window.matchMedia( "(max-width: 767px)" ).matches) {
 // スマホ幅のグローバルナビの固定
 if (window.matchMedia( "(max-width: 767px)" ).matches) {
     var _window = $(window),
-    _navi = $(".gnavi"),
+    _navi = $(".global-nav"),
     mainPhotoBottom;
 
     _window.on("scroll", function () {
@@ -79,10 +79,10 @@ jQuery(function() {
 });
 // ハンバーガーメニューをクリックするとスライドダウン
 jQuery('#my-parts-checkbox').on('click', function() {
-    if(jQuery('.gnavi .menu').css('display') === 'block') {
-      jQuery('.gnavi .menu').slideUp('1500');
+    if(jQuery('.global-nav .menu').css('display') === 'block') {
+      jQuery('.global-nav .menu').slideUp('1500');
     }else {
-      jQuery('.gnavi .menu').slideDown('500');
+      jQuery('.global-nav .menu').slideDown('500');
     }
   });
 

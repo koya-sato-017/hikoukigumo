@@ -25,7 +25,7 @@
       </div>
       <input id="my-parts-checkbox" class="my-parts-hidden" type="checkbox">
       <label id="my-parts-icon" for="my-parts-checkbox"><span></span></label>
-      <nav id="global-nav" class="gnavi">
+      <nav id="global-nav" class="global-nav">
 <?php
 wp_nav_menu(
   array(

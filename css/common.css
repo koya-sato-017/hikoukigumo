@@ -60,25 +60,25 @@ ul {
     .my-parts-hidden {
         display: none;
     }
-    .gnavi {
+    .global-nav {
     }
-    .gnavi.fixed {
+    .global-nav.fixed {
     }
-    .gnavi ul {
+    .global-nav ul {
         left: 0;
         width: 320px;
         display: inline-block;
         flex-direction: column;
     }
-    .gnavi li {
+    .global-nav li {
         text-align: center;
         border-top: 1px solid #e5dbdb;
         padding: 12px 0;
     }
-    .gnavi li:nth-child(8) {
+    .global-nav li:nth-child(8) {
         border-bottom: 1px solid #e5dbdb;
     }
-    .gnavi li a span {
+    .global-nav li a span {
         color: #265e10;
     }
     .menu .current {
@@ -332,27 +332,27 @@ ul {
     .my-parts-hidden {
         display: none;
     }
-    .gnavi {
+    .global-nav {
         width: 100%;
     }
-    .gnavi.fixed {
+    .global-nav.fixed {
         position: fixed;
         top: 0;
         z-index: 900;
     }
-    .gnavi {
+    .global-nav {
         height: 80px;
         background-color: #eaf3ff;
         box-shadow: 0 3px 6px -3px #000000 inset;
         font-size: 1em;
         opacity: 0.8;
     }
-    .gnavi__inner {
+    .global-nav__inner {
         width: 100%;
         height: 100%;
         margin: 0 auto;
     }
-    .gnavi .menu {
+    .global-nav .menu {
         display: flex;
         justify-content: space-between;
         position: absolute;
@@ -363,7 +363,7 @@ ul {
         margin: 0 auto;
         background: #DDDDDD;
     }
-    .gnavi .menu li {
+    .global-nav .menu li {
         /* flex: 1; */
         box-sizing: border-box;
         position: relative;
@@ -376,7 +376,7 @@ ul {
         -webkit-box-align: center;
         border-right: 1px solid #ccc;
     }
-    .gnavi .menu li:last-child {
+    .global-nav .menu li:last-child {
         border-right: none;
     }
     .menu .current_page_item {
@@ -385,15 +385,15 @@ ul {
     .menu .current-menu-item {
         background-color: #C0C0C0;
     }
-    .gnavi .menu li a {
+    .global-nav .menu li a {
         display: inline-block;
         vertical-align: middle;
     }
-    .gnavi a:hover span {
+    .global-nav a:hover span {
         color: #ff7600;
         position: relative;
     }
-    .gnavi a:hover span::after {
+    .global-nav a:hover span::after {
         content: "";
         position: absolute;
         display: block;
@@ -748,23 +748,23 @@ ul {
         position: absolute;
         top: 25%
     }
-    .gnavi {
+    .global-nav {
         height: auto;
         padding: 0;
         font-size: 0.9em;
         opacity: 1;
         position: relative;
     }
-    .gnavi.fixed {
+    .global-nav.fixed {
         position: fixed;
         top: 50px;
         z-index: 900;
     }
-    .gnavi__inner {
+    .global-nav__inner {
         width: 100%;
         height: 100%;
     }
-    .gnavi .menu {
+    .global-nav .menu {
         position: absolute;
         width: 100%;
         height: auto;
@@ -776,15 +776,15 @@ ul {
     .menu .current {
         background-color: #FFF4F4;
     }
-    .gnavi .menu li {
+    .global-nav .menu li {
         width: 100%;
         height: 40px;
         border-bottom: 1px solid #ccc;
     }
-    .gnavi .menu li:last-child {
+    .global-nav .menu li:last-child {
         border-bottom: none;
     }
-    .gnavi .menu li a {
+    .global-nav .menu li a {
         text-align: left;
         width: 100%;
         border-right: none;
