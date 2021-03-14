@@ -32,6 +32,7 @@ register_nav_menus(
   )
 );
 
+// メイン画像上にテンプレートごとの文字列を表示
 function get_main_title() {
   if(is_singular('post')):
     $category_obj = get_the_category();
@@ -52,3 +53,16 @@ add_image_size('top', 1077, 622, true);
 // プロフィール画像用のサイズ設定
 add_image_size('profile', 577, 280, true);
 
+// 子ページを取得する関数
+function get_child_pages($number = -1) {
+  $parent_id = get_the_ID();
+  $args = array(
+      'post_per_page' => $number,
+      'post_type' => 'page',
+      'orderby' => 'menu_order',
+      'order' => 'ASC',
+      'post_parent' => $parent_id,
+  );
+  $child_pages = new WP_Query($args);
+  return $child_pages;
+}
