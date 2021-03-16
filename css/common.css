@@ -438,6 +438,15 @@ ul {
         text-decoration: underline;
         color: #555;
     }
+
+    .page-container {
+        max-width: 1120px;
+    }
+    .commons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     .news-link {
         display: block;
         color: #343434;
