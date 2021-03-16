@@ -18,3 +18,17 @@
     border: 1px solid #C0C0C0;
     margin-bottom: 1em;
 }
+
+@media screen and (max-width: 767px) {
+    .blog ul {
+        /* display: flex; */
+        /* flex-flow: column; */
+        /* justify-content: space-around; */
+    }
+    .blog ul li {
+        width: 90%;
+        height: 12em;
+        border: 1px solid #C0C0C0;
+        margin-bottom: 1em;
+    }
+}
