@@ -10,10 +10,15 @@
   </section>
 
   <article class="blog">
-
     <ul>
       <?php
-      $get_posts = new WP_Query(array('post_type' => 'post'));
+      $args = array(
+        'posts_per_page' => 9,
+        'post_type' => 'post',
+        'orderby' => 'modified',
+        'order' => 'DESC',
+      );
+      $get_posts = new WP_Query($args);
       if ($get_posts->have_posts()) :
         while ($get_posts->have_posts()) : $get_posts->the_post();
           get_template_part('content-common');
