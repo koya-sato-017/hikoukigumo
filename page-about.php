@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <main id="page-main">
-    <ul class="commons">
+    <div class="page-container">
+        <ul class="commons">
 <?php
 $common_pages = get_child_pages();
 if($common_pages->have_posts()):
@@ -10,6 +11,7 @@ if($common_pages->have_posts()):
     wp_reset_postdata();
     endif;
 ?>
-    </ul>
+        </ul>
+    </div>
     
 <?php get_footer(); ?>
