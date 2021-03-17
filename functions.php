@@ -3,9 +3,6 @@ function my_enqueue_scripts() {
     
   wp_enqueue_style( 'normalize_style', get_template_directory_uri() . '/css/normalize.css', array() );
   wp_enqueue_style( 'common_style', get_template_directory_uri() . '/css/common.css', array() );
-  wp_enqueue_style( 'home_style', get_template_directory_uri() . '/css/home.css', array() );
-  
-  
   wp_enqueue_style( 'slick-theme_style', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', array() );
   wp_enqueue_style( 'slick_style', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', array() );
   wp_enqueue_style( 'my-fa5', '//use.fontawesome.com/releases/v5.6.1/css/all.css', array(), NULL );
@@ -50,8 +47,14 @@ add_theme_support('post-thumbnails');
 // トップページのメイン画像用のサイズ設定
 add_image_size('top', 1077, 622, true);
 
+// イベント情報用のサイズ設定
+add_image_size('common', 314, 194, true);
+
 // プロフィール画像用のサイズ設定
 add_image_size('profile', 577, 280, true);
+
+// 各ページのメイン画像用のサイズ設定
+add_image_size('detail', 1100, 330, true);
 
 // 子ページを取得する関数
 function get_child_pages($number = -1) {
