@@ -125,6 +125,34 @@ ul {
         color: #555;
     }
 
+    .slider {
+        /* position: relative; */
+        margin: 0 auto;
+    }
+    .slider img {
+        /* position:absolute; */
+        /* display: none; */
+        width: 100%;
+    }
+    .blog ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .blog ul li {
+        width: 30%;
+        height: 12em;
+        border: 1px solid #C0C0C0;
+        margin-bottom: 1em;
+    }
+    .blog .name {
+        margin: 12px 0 64px 12px;
+    }
+    .blog .buttonBox {
+        text-align: right;
+        margin-right: 12px;
+    }
+
     footer {
         border-top: 1px solid #F6E9E9;
         margin-top: 48px;
@@ -798,6 +826,19 @@ ul {
         width: 100%;
         border-right: none;
     }
+
+    .blog ul {
+        /* display: flex; */
+        /* flex-flow: column; */
+        /* justify-content: space-around; */
+    }
+    .blog ul li {
+        width: 90%;
+        height: 12em;
+        border: 1px solid #C0C0C0;
+        margin-bottom: 1em;
+    }
+    
     .footer-main {
         display: flex;
         flex-wrap: wrap;
