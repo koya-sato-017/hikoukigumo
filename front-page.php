@@ -15,7 +15,7 @@
       $args = array(
         'posts_per_page' => 9,
         'post_type' => 'post',
-        'orderby' => 'modified',
+        'orderby' => 'date',
         'order' => 'DESC',
       );
       $get_posts = new WP_Query($args);
