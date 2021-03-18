@@ -12,15 +12,9 @@
   <article class="blog">
     <ul>
       <?php
-      $args = array(
-        'posts_per_page' => 9,
-        'post_type' => 'post',
-        'orderby' => 'date',
-        'order' => 'DESC',
-      );
-      $get_posts = new WP_Query($args);
-      if ($get_posts->have_posts()) :
-        while ($get_posts->have_posts()) : $get_posts->the_post();
+      $common_posts = get_new_posts();
+      if ($common_posts->have_posts()) :
+        while ($common_posts->have_posts()) : $common_posts->the_post();
           get_template_part('content-common');
         endwhile;
         wp_reset_postdata();

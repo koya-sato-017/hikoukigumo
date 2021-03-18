@@ -69,3 +69,15 @@ function get_child_pages($number = -1) {
   $child_pages = new WP_Query($args);
   return $child_pages;
 }
+
+// 最新記事を取得する関数
+function get_new_posts() {
+  $args = array(
+    'posts_per_page' => 9,
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => 'DESC',
+  );
+  $new_posts = new WP_Query($args);
+  return $new_posts;
+}
