@@ -27,7 +27,7 @@
           <section class="info-nav">
             <div class="photo-gallery">
               <p class="info-title">フォトギャラリー</p>
-              <a href="photo_gallery.php">
+              <a href="<?php echo get_permalink('photogallery'); ?>">
                 <div class="content">
                   <p>ひこうきぐものフォトギャラリー</p>
                   <p>こちらをタップ</p>
