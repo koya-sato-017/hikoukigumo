@@ -17,6 +17,10 @@
             <a itemprop="item" href="<?php echo get_permalink(31); ?>">
                 <span itemprop="name">お問い合わせ</span>
             </a>
+<?php elseif(is_page(118)): ?>
+            <a itemprop="item" href="<?php echo get_permalink(31); ?>">
+                <span itemprop="name">サービス紹介</span>
+            </a>
 <?php endif; ?>
             <meta itemprop="position" content="2">
         </li>
