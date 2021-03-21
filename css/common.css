@@ -513,7 +513,7 @@ ul {
     }
     .commons {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
     .news-link {
@@ -536,7 +536,11 @@ ul {
     }
     .news-link .news-body .title {
         width: 85%;
-        
+    }
+
+    .about-info {
+        display: flex;
+        justify-content: space-around;
     }
 
     footer {
