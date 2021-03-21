@@ -56,9 +56,13 @@ add_image_size('profile', 577, 280, true);
 // 各ページのメイン画像用のサイズ設定
 add_image_size('detail', 1100, 330, true);
 
-// 子ページを取得する関数
-function get_child_pages($number = -1) {
-  $parent_id = get_the_ID();
+// 子ページ一覧の抽出条件
+function get_child_pages($number = -1, $specified_id = null) {
+  if(isset($specified_id)):
+    $parent_id = $specified_id;
+  else:
+    $parent_id = get_the_ID();
+  endif;
   $args = array(
       'post_per_page' => $number,
       'post_type' => 'page',
